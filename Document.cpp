@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 
+
 class DocumentPart
 {
   private:
@@ -12,6 +13,18 @@ class DocumentPart
   virtual std::wstring ToHTML() = 0;
   virtual std::wstring ToPlainText() = 0;
   virtual std::wstring ToLatex() = 0;
+};
+//C#
+abstract class DocumentPart
+{
+  
+ string Text;
+
+  public string getText(){}
+  void setText(string value);
+  abstract string ToHTML();
+  abstract string ToPlainText()
+  abstract string ToLatex()
 };
 
 class PlainText : public DocumentPart
